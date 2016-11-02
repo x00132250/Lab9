@@ -9,11 +9,11 @@ public class HomeController extends Controller {
     }
 
     public Result about() {
-        return ok(about.render("About Us"));
+        return ok(about.render());
     }
 
     public Result products() {
-        return ok(products.render("Our Products"));
+        return ok(products.render());
     }
 
 }

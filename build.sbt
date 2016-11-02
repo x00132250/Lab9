@@ -1,4 +1,4 @@
-name := """lab2"""
+name := """Shop"""
 
 version := "1.0-SNAPSHOT"
 
