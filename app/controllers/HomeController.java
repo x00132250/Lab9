@@ -28,8 +28,8 @@ public class HomeController extends Controller {
     public Result products() {
 
         // Get list of all categories in ascending order
-        List<models.Product> products = models.Product.findAll();
-        return ok(products.render(products));
+        List<Product> productsList = Product.findAll();
+        return ok(products.render(productsList));
     }
 
 }
