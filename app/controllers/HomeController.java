@@ -1,6 +1,19 @@
 package controllers;
+
+import play.api.Environment;
 import play.mvc.*;
+import play.data.*;
+import play.db.ebean.Transactional;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.inject.Inject;
+
 import views.html.*;
+
+// Import models
+import models.*;
+
 
 public class HomeController extends Controller {
 
@@ -13,7 +26,10 @@ public class HomeController extends Controller {
     }
 
     public Result products() {
-        return ok(products.render());
+
+        // Get list of all categories in ascending order
+        List<models.Product> products = models.Product.findAll();
+        return ok(products.render(products));
     }
 
 }

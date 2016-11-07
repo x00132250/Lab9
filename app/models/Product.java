@@ -42,6 +42,15 @@ public class Product extends Model {
         this.price = price;
     }
 
+    //Generic query helper for entity Computer with id Long
+    public static Finder<Long,Product> find = new Finder<Long,Product>(Product.class);
+
+    // Find all Products in the database
+    // Filter product name 
+    public static List<Product> findAll() {
+        return Product.find.all();
+    }
+
     public Long getId() {
         return id;
     }
